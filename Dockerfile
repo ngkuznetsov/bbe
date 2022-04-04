@@ -16,5 +16,5 @@ RUN wget -O blackbox_exporter-${VERSION}.$OS-${ARCH}.tar.gz https://github.com/p
 
 COPY blackbox.yml /etc/blackbox_exporter/config.yml
 
-ENTRYPOINT  [ "/bin/blackbox_exporter" ]
-CMD         [ "--config.file=/etc/blackbox_exporter/config.yml" ]
+ENTRYPOINT  [ "/bin/blackbox_exporter", "--config.file=/etc/blackbox_exporter/config.yml" ]
+CMD --web.listen-address=:$PORT

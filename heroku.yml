@@ -1,3 +1,5 @@
 build:
   docker:
     web: Dockerfile
+# run:
+#   web: /bin/blackbox_exporter --web.listen-address=:$PORT --config.file=/etc/blackbox_exporter/config.yml
